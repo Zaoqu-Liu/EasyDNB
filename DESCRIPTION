@@ -1,0 +1,19 @@
+Package: EasyDNB
+Type: Package
+Title: EasyDNB
+Version: 0.1.0
+Author: Zaoqu Liu
+Maintainer: Zaoqu Liu <liuzaoqu@163.com>
+Description: Simple use of DNB theory in bulk and single-cell data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+Imports: 
+    future,
+    magrittr,
+    purrr,
+    stats
