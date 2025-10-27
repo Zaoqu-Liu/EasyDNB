@@ -53,7 +53,7 @@ lzq_LDNB <- function(
   state <- state[match(colnames(expr), state$ID), ]
 
   ref.samples <- state$ID[state$state=='ref']
-  SSN <- lzq_SSPN(expr = exp,
+  SSN <- lzq_SSPN(expr = expr,
                   ref.samples = ref.samples,
                   cor.method = cor.method,
                   p.adjust.method=p.adjust.method,
@@ -155,7 +155,7 @@ lzq_LDNB <- function(
   cat(paste0("+++ ", length(DNB.genes), " genes (DNB module) involved in the critical state...\n"))
   cat("\n")
   cat("+++ Done!\n")
-
+  future::plan(future::sequential)
   return(list(
     state.GI = state.GI,
     DNB.genes = DNB.genes,
